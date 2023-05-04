@@ -14,5 +14,14 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println("hello world");
+
+        /**
+         * result:
+         * url: - http://localhost:8080/hello
+         *      - http://localhost:8080/world
+         *
+         * hello world
+         */
+
     }
 }

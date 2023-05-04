@@ -33,5 +33,12 @@ public class CounterServlet extends HttpServlet {
         log.info("counter {}", total);
         log.info("response {}", response);
 
+        /**
+         * result:
+         * url: http://localhost:8080/counter
+         * Total Counter: 7
+         */
+
     }
+
 }

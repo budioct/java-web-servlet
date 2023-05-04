@@ -45,6 +45,12 @@ public class SafeServlet extends HttpServlet {
 
         resp.getWriter().println(response); // PrintWriter getWriter() // mengembalikan teks ke client
 
+        /**
+         * result:
+         * url: http://localhost:8080/safebro?name=sendi&sleep=1000
+         * hello sendi
+         */
+
     }
 
 

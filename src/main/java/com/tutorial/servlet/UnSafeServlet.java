@@ -45,6 +45,15 @@ public class UnSafeServlet extends HttpServlet {
 
         resp.getWriter().println(response); // PrintWriter getWriter() // mengembalikan teks ke client
 
+        /**
+         * result:
+         * url: http://localhost:8080/safebro?name=malik&sleep=7000
+         * hello sendi
+         *
+         * url: http://localhost:8080/safebro?name=sendi&sleep=2000
+         * hello sendi
+         */
+
     }
 
 
