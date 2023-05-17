@@ -1,4 +1,4 @@
-package com.tutorial.servlet;
+package com.tutorial.servlet.HTTP.request.header;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -11,6 +11,18 @@ import java.util.Enumeration;
 
 @WebServlet(urlPatterns = "/header")
 public class RequestHeader extends HttpServlet {
+
+    /**
+     * Request Header
+     * ● Request Header yang dikirim oleh user juga bisa kita ambil dari object HttpServletRequest
+     * ● getHeader(name) untuk mendapat value header berdasarkan nama
+     * ● getHeaderValues(name) untuk mendapat value header yang lebih dari satu
+     * ● getHeaderNames() untuk mendapat semua nama header
+     * ● getDateHeader(name) untuk mendapat value header yang bernilai date (milis)
+     * ● getIntHeader(name) untuk mendapat value header yang bernilai int
+     * ** Perlu diingat, bahwa header name itu tidak case sensitive, jadi Content-Type dan content-type adalah nama yang sama
+     *
+     */
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

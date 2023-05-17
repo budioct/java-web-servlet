@@ -1,4 +1,4 @@
-package com.tutorial.servlet;
+package com.tutorial.servlet.singleton;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -15,6 +15,8 @@ import java.util.concurrent.atomic.AtomicLong;
 public class CounterServlet extends HttpServlet {
 
     /**
+     * Singleton (Satu object di akses semua request)
+     *
      * object java.util.concurrent.atomic.AtomicLong
      * length value yang dapat di update secara atomic,digunkana dalam aplikasi untuk nomer urut yang bertambah secara atomic,
      * dan tidak dapat digunakan sebagai penganti
@@ -26,7 +28,8 @@ public class CounterServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        long total = atomicLong.incrementAndGet();
+        long total = atomicLong.incrementAndGet(); // long incrementAndGet() // Secara atomik menambah satu nilai saat ini.
+
         String response = "Total Counter: " + total;
         resp.getWriter().println(response); // PrintWriter getWriter() // mengembalikan teks ke client
 
